@@ -1,0 +1,15 @@
+# compiled / generated files
+*.o
+*.out
+*.exe
+
+# linux executables made by -o
+hw2prb1
+hw2prb2a
+hw2prb2b
+hw2prb2c
+hw2prb3
+
+# nano backups / temp
+*.save
+*~
