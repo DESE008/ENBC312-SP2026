@@ -9,7 +9,7 @@ This folder contains solutions for Homework 3 for ENBC312.
 * **hw3q3.cpp** – Reversing an array using a pointer-based approach
 * **hw3q4.cpp** – Swapping two numbers using a pointer function
 
-All programs were compiled using `g++` and tested in the Linux terminal environment.
+All programs were compiled using `g++` and tested in the Putty using nano  terminal environment.
 
 Author: Sethmini Denegama
 Course: ENBC312
