@@ -13,9 +13,9 @@ g++ pj.cpp -o pj2
 
 ---
 
-## UML (please view the edit/code mode for the correct verson)
+UML (please view the edit/code/blame mode for the correct verson)
 
-Class Diagram
+##Class Diagram
 
         Car
 -------------------------
