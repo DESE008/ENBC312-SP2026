@@ -8,8 +8,8 @@ It allows users to rent, return, and view cars, and get recommendations.
 
 ## How to Run
 
-g++ project2.cpp -o project2
-./project2
+g++ pj.cpp -o pj2
+./pj2
 
 ---
 
@@ -41,8 +41,8 @@ CarRentalSystem
 - cars
 - history
 -------------------------
-+ listCars()
-+ rentCar()
+   + listCars()
+ + rentCar()
 + returnCar()
 + sortCars()
 + showRecommendation()
