@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Rental</title>
+</head>
+
+<body>
+
+<h2>Car Rental System</h2>
+
+<button onclick="showRec()">Get Recommendation</button>
+<p id="rec"></p>
+
+<div id="cars"></div>
+
+<script>
+
+// fake data (like your C++)
+let cars = [
+ {name:"Camry", type:"Sedan", a:true},
+ {name:"CRV", type:"SUV", a:true},
+ {name:"F150", type:"Truck", a:true}
+];
+
+let history = ["SUV","SUV","Sedan"];
+
+// recommendation logic
+function recommend(){
+ let suv=0, sedan=0, truck=0;
+
+ for(let i=0;i<history.length;i++){
+  if(history[i]=="SUV") suv++;
+  else if(history[i]=="Sedan") sedan++;
+  else truck++;
+ }
+
+ if(suv>=sedan && suv>=truck) return "SUV";
+ if(sedan>=suv && sedan>=truck) return "Sedan";
+ return "Truck";
+}
+
+// display cars
+function render(){
+ let div=document.getElementById("cars");
+ div.innerHTML="";
+
+ for(let i=0;i<cars.length;i++){
+  let c=cars[i];
+
+  let d=document.createElement("div");
+
+  d.innerHTML =
+   c.name + "<br>" +
+   c.type + "<br>" +
+   (c.a ? "Available" : "Rented") + "<br>" +
+   "<button onclick='rent("+i+")'>Rent</button>" +
+   "<button onclick='ret("+i+")'>Return</button><hr>";
+
+  div.appendChild(d);
+ }
+}
+
+// rent
+function rent(i){
+ if(!cars[i].a){ alert("Already rented"); return; }
+ cars[i].a=false;
+ history.push(cars[i].type);
+ render();
+}
+
+// return
+function ret(i){
+ cars[i].a=true;
+ render();
+}
+
+// show recommendation
+function showRec(){
+ document.getElementById("rec").innerText =
+  "Suggested: " + recommend();
+}
+
+render();
+
+</script>
+
+</body>
+</html>
