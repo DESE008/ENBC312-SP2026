@@ -13,7 +13,7 @@ g++ pj.cpp -o pj2
 
 ---
 
-## UML
+## UML (please view the edit view for the correct verson)
 
 Class Diagram
 
